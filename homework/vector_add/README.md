@@ -35,4 +35,4 @@ Adapt your code to test both 32-bit integers and doubles.  Rerun profiling.  Wha
 
 ## Submission
 
-Submit the `main.c` and `kernel.cl` files on Gradescope with the original `float` datatypes.  This will be graded by Gradescope and will expect at least 32-bit floating point precision.  You may lose points if you do not revert to the `float` datatype. Preserve the file name while uploading to Gradescope.  Report your time analysis from `opencl-intercept-layer`.
+Submit the `main.c` and `kernel.cl` files on Gradescope with the original `float` datatypes.  This will be graded by Gradescope and will expect at least 32-bit floating point precision.  You may lose points if you do not revert to the `float` datatype. Preserve the file name while uploading to Gradescope.  Report your time analysis.

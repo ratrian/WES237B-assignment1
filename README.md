@@ -6,7 +6,7 @@
 Using Google Chrome on your Pixel Fold, navigate to the F-Droid [website](https://f-droid.org/en/).  Click on the `DOWNLOAD F-DROID` button.  This will download the `apk` for F-Droid.  Look for the notification for the download.  Once you tap it, you will be prompted with the screen to enable installation of `apk`s from Google Chrome.  Turn on the setting and continue.
 
 ### Termux
-Open F-Droid and search for `Termux`.  Install the package `Termux: Terminal Editor with Packages`.  this will once again prompt you to enable the installation of `apk`s from F-Droid.  Turn on the setting and continue.  You will then be warned that `Termux` is intended for an older version of Android.  Click `More Information` and select `Install anyway`.  Start `Termux`, accept notifications.  Close `Termux`.  Start `Termux` again.  Check your notifications, expand the `Termux` notification and click `Aquire wake lock`.
+Open F-Droid and search for `Termux`.  Install the package `Termux: Terminal Emulator with Packages`.  this will once again prompt you to enable the installation of `apk`s from F-Droid.  Turn on the setting and continue.  You will then be warned that `Termux` is intended for an older version of Android.  Click `More Information` and select `Install anyway`.  Start `Termux`, accept notifications.  Close `Termux`.  Start `Termux` again.  Check your notifications, expand the `Termux` notification and click `Aquire wake lock`.
 
 ### Install Code Server
 In `Termux` perform the following
@@ -30,7 +30,7 @@ In `code-server` in your browser, open up terminal by selecting the Hamburger me
 1. `pkg install git`
 2. `ssh-keygen`.  Accept the defaults.
 3. `cat ~/.ssh/id_ed25519.pub`.  Add this ssh key to your GitHub account.
-4. `git clone git@github.com:ucsd-wes-237b/assignment-1.git`.  Open the folder in `code-server` using the Hamburger menu -> File -> Open Folder.
+4. `git clone git@github.com:ratrian/WES237B-assignment1.git`.  Open the folder in `code-server` using the Hamburger menu -> File -> Open Folder.
 5. `pkg install build-essential`
 6. `pkg install binutils`
 7. `pkg install ocl-icd`
