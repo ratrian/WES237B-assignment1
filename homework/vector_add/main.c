@@ -47,11 +47,9 @@ int main(int argc, char *argv[])
 
     err = LoadMatrix(input_file_a, &host_a);
     CHECK_ERR(err, "LoadMatrix");
-    printf("Input0 Vector Shape: [%u, %u]\n", host_a.shape[0], host_a.shape[1]);
 
     err = LoadMatrix(input_file_b, &host_b);
     CHECK_ERR(err, "LoadMatrix");
-    printf("Input1 Vector Shape: [%u, %u]\n", host_b.shape[0], host_b.shape[1]);
 
     err = LoadMatrix(input_file_c, &answer);
     CHECK_ERR(err, "LoadMatrix");
@@ -120,15 +118,15 @@ int main(int argc, char *argv[])
     clFinish(queue);
    
     //@@ Copy the GPU memory back to the CPU here
-    CheckMatrix(&answer, &host_c);
     clEnqueueReadBuffer(queue, device_c, CL_TRUE, 0, host_c.shape[0]*host_c.shape[1]*sizeof(float), host_c.data, 0, NULL, NULL);
+    err = CheckMatrix(&answer, &host_c);
+    CHECK_ERR(err, "CheckMatrix");
 
     // Save the result
     err = SaveMatrix(input_file_d, &host_c);
     CHECK_ERR(err, "SaveMatrix");
 
     // Prints the results
-    printf("Output Vector Shape: [%u, %u]\n", host_c.shape[0], host_c.shape[1]);
     for (unsigned int i = 0; i < host_c.shape[0] * host_c.shape[1]; i++)
     {
         printf("C[%u]: %f == %f\n", i, host_c.data[i], host_a.data[i] + host_b.data[i]);
