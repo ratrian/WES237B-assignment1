@@ -126,12 +126,6 @@ int main(int argc, char *argv[])
     err = SaveMatrix(input_file_d, &host_c);
     CHECK_ERR(err, "SaveMatrix");
 
-    // Prints the results
-    for (unsigned int i = 0; i < host_c.shape[0] * host_c.shape[1]; i++)
-    {
-        printf("C[%u]: %f == %f\n", i, host_c.data[i], host_a.data[i] + host_b.data[i]);
-    }
-
     //@@ Free the GPU memory here
     clReleaseMemObject(device_a);
     clReleaseMemObject(device_b);
