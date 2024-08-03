@@ -31,8 +31,9 @@ Use the `make run` command to test your program. There are a total of 10 tests o
 The dataset required to test the program is already generated. If you are interested in how the dataset is generated please refer to the `dataset_generator.py` file in the `Dataset` directory. You may run this script using `python dataset_generator.py`.
 
 ## Different Data Types
-Adapt your code to test both 32-bit integers and doubles.  Rerun profiling.  What changed?
+
+Adapt your code to test both 32-bit integers and doubles.
 
 ## Submission
 
-Submit the `main.c` and `kernel.cl` files on Gradescope with the original `float` datatypes.  This will be graded by Gradescope and will expect at least 32-bit floating point precision.  You may lose points if you do not revert to the `float` datatype. Preserve the file name while uploading to Gradescope.  Report your time analysis.
+Submit the `main.c` and `kernel.cl` files on Gradescope with the original `float` datatypes.  This will be graded by Gradescope and will expect at least 32-bit floating point precision.  You may lose points if you do not revert to the `float` datatype. Preserve the file name while uploading to Gradescope.
