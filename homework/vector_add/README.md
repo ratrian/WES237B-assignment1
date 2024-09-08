@@ -20,7 +20,7 @@ Instructions about where to place each part of the code is demarcated by the `//
 
 ## How to Compile
 
-The `main.c` and `kernel.cl` files contain the code for the programming assignment. There is a Makefile included which compiles it. It can be run by typing `make` from the PA2 folder. It generates a `solution` output file. During development, make sure to run the `make clean` command before running `make`. 
+The `main.c` and `kernel.cl` files contain the code for the programming assignment. There is a Makefile included which compiles it. It can be run by typing `make` from the `homework/vector_add` folder. It generates a `solution` output file. During development, make sure to run the `make clean` command before running `make`. 
 
 ## How to test
 
